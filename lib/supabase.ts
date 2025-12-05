@@ -10,11 +10,15 @@ if (!supabaseUrl || !supabaseAnonKey) {
   )
 }
 
+// Non-nullable after validation (helps TypeScript in build step)
+const supabaseUrlSafe = supabaseUrl as string
+const supabaseAnonKeySafe = supabaseAnonKey as string
+
 /**
  * Cliente de Supabase para uso en Server Components y API Routes
  * Este cliente se crea una vez y se reutiliza en el servidor
  */
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+export const supabase = createClient(supabaseUrlSafe, supabaseAnonKeySafe, {
   auth: {
     persistSession: false, // No persistir sesión en servidor
   },
@@ -25,7 +29,7 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
  * Úsala si necesitas un cliente específico en componentes del cliente
  */
 export function createBrowserClient() {
-  return createClient(supabaseUrl, supabaseAnonKey)
+  return createClient(supabaseUrlSafe, supabaseAnonKeySafe)
 }
 
 export interface Lead {
