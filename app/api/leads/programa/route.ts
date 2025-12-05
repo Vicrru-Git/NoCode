@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { saveLead } from '@/lib/supabase'
 
+/**
+ * @deprecated This route is kept for backward compatibility.
+ * New code should use /api/leads with form_source: 'programa'
+ * This route automatically sets form_source to 'programa'
+ */
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -27,7 +32,8 @@ export async function POST(request: NextRequest) {
       name,
       email,
       phone,
-      company: company || '',
+      company: company || undefined,
+      form_source: 'programa',
       lead_type: 'programa',
     })
 

@@ -27,7 +27,10 @@ export default function Formulario() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          form_source: 'home', // Indicates this form comes from the home page
+        }),
       })
 
       const data = await response.json()

@@ -1,9 +1,32 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+// Validar variables de entorno
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error(
+    'Missing Supabase environment variables. Please check NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY'
+  )
+}
+
+/**
+ * Cliente de Supabase para uso en Server Components y API Routes
+ * Este cliente se crea una vez y se reutiliza en el servidor
+ */
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    persistSession: false, // No persistir sesión en servidor
+  },
+})
+
+/**
+ * Función helper para crear cliente en Client Components
+ * Úsala si necesitas un cliente específico en componentes del cliente
+ */
+export function createBrowserClient() {
+  return createClient(supabaseUrl, supabaseAnonKey)
+}
 
 export interface Lead {
   name: string
@@ -12,6 +35,7 @@ export interface Lead {
   project_idea?: string
   company?: string
   lead_type?: 'general' | 'programa'
+  form_source?: 'home' | 'programa' // Indicates where the form was submitted from
 }
 
 export interface BlogPost {
@@ -39,7 +63,13 @@ export interface FAQ {
 export async function saveLead(lead: Lead) {
   const { data, error } = await supabase
     .from('leads')
-    .insert([{ ...lead, lead_type: lead.lead_type || 'general' }])
+    .insert([
+      {
+        ...lead,
+        lead_type: lead.lead_type || (lead.form_source === 'programa' ? 'programa' : 'general'),
+        form_source: lead.form_source || 'home',
+      },
+    ])
     .select()
 
   if (error) {
