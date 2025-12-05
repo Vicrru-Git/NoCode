@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const navItems = [
@@ -84,10 +85,12 @@ export default function Navigation() {
               className="flex items-center gap-3 cursor-pointer"
             >
               <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
-                <img 
-                  src="/logo.svg" 
-                  alt="NoCode Academy Logo" 
-                  className="w-full h-full object-contain"
+                <Image
+                  src="/logo.svg"
+                  alt="NoCode Academy Logo"
+                  width={48}
+                  height={48}
+                  priority
                 />
               </div>
               <span className="text-xl font-bold hidden sm:block">NoCode Academy</span>
