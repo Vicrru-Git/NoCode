@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   title: "NoCode Academy - Crea tu Negocio Digital en 90 Días",
   description: "Academia exclusiva que enseña a crear negocios digitales con herramientas NoCode e IA. Solo 10 plazas disponibles.",
   keywords: "NoCode, IA, negocios digitales, emprendimiento, formación",
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
