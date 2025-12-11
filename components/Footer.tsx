@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Mail, Linkedin, Twitter, ArrowUp } from 'lucide-react'
 
@@ -51,12 +52,16 @@ export default function Footer() {
                 href="https://konektorgroup.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-1 rounded-lg bg-gray-800 border border-gray-700 hover:border-primary transition-colors"
+                className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 hover:border-primary transition-colors"
               >
-                <div className="w-5 h-5 rounded bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
-                  <span className="text-white font-bold text-xs">K</span>
-                </div>
-                <span className="font-semibold">Konektor</span>
+                <Image
+                  src="/Konektor-Logo-rosa-texto-blanco.png"
+                  alt="Konektor Logo"
+                  width={200}
+                  height={70}
+                  className="h-12 sm:h-16 w-auto object-contain"
+                  unoptimized
+                />
               </a>
             </div>
           </div>

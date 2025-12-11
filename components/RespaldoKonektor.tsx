@@ -74,10 +74,14 @@ export default function RespaldoKonektor() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-gray-900 to-gray-800 border border-gray-800 hover:border-primary transition-all duration-300 hover:scale-105 relative"
             >
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
-                <span className="text-white font-bold text-base">K</span>
-              </div>
-              <span className="text-2xl font-bold">Konektor</span>
+              <Image
+                src="/Konektor-Logo-rosa-texto-blanco.png"
+                alt="Konektor Logo"
+                width={360}
+                height={120}
+                className="h-24 sm:h-32 md:h-36 w-auto object-contain"
+                unoptimized
+              />
             </a>
           </motion.div>
         </motion.div>

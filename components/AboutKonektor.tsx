@@ -85,6 +85,30 @@ export default function AboutKonektor() {
                 <span className="text-sm font-medium text-secondary">Ecosistema Konektor</span>
               </div>
               
+              {/* Konektor Logo */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="mb-8 flex justify-center"
+              >
+                <a
+                  href="https://konektorgroup.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block hover:opacity-80 transition-opacity"
+                >
+                  <Image
+                    src="/Konektor-Logo-rosa-texto-blanco.png"
+                    alt="Konektor Logo"
+                    width={400}
+                    height={140}
+                    className="h-28 sm:h-36 md:h-40 lg:h-44 w-auto object-contain"
+                    unoptimized
+                  />
+                </a>
+              </motion.div>
+              
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-12 leading-tight">
                 El{' '}
                 <span className="gradient-text">Ecosistema Konektor</span>
