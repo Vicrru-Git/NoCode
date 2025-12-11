@@ -11,7 +11,7 @@ const modulos = [
     duracion: '3 semanas',
     icon: Target,
     descripcion: 'Identifica oportunidades de mercado validadas y encuentra problemas que la gente está dispuesta a pagar por resolver',
-    entregables: ['Análisis de mercado', 'Validación de idea', 'Persona objetivo definida'],
+    Contenido: ['Análisis de mercado', 'Validación de idea', 'Persona objetivo definida'],
     gradient: 'from-primary to-primary/50',
   },
   {
@@ -20,7 +20,7 @@ const modulos = [
     duracion: '4 semanas',
     icon: Code,
     descripcion: 'Domina herramientas NoCode como Lovable, N8N, Cursor y construye tu MVP funcional sin escribir código',
-    entregables: ['MVP funcional', 'Integraciones automatizadas', 'Base de datos configurada'],
+    Contenido: ['MVP funcional', 'Integraciones y arquitectura', 'Growth y CI/CD'],
     gradient: 'from-secondary to-secondary/50',
   },
   {
@@ -28,8 +28,8 @@ const modulos = [
     titulo: 'Lanzamiento y Monetización',
     duracion: '3 semanas',
     icon: Rocket,
-    descripcion: 'Implementa estrategias de GTM y monetización probadas y aprende a escalar tu negocio digital',
-    entregables: ['Modelo de negocio definido', 'Primeros clientes', 'Sistema de crecimiento'],
+    descripcion: 'Implementa estrategias de GTM y monetización probadas. Aprende a escalar tu negocio digital con IA',
+    Contenido: ['Estrategias de captación y GTM', 'Automatización de procesos y ventas', 'Cusomter Success y Feedback'],
     gradient: 'from-primary via-secondary to-primary',
   },
 ]
@@ -109,7 +109,9 @@ export default function ProgramaEsquema() {
             
             <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
               Un programa intensivo de 3 meses diseñado para transformarte en creador de negocios digitales. 
-              Desde la idea hasta tu primer cliente en 90 días.
+              Desde la 
+              <span className="text-primary font-semibold"> idea</span> hasta tu
+              <span className="text-secondary font-semibold"> primer cliente</span> en 90 días.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
@@ -187,17 +189,17 @@ export default function ProgramaEsquema() {
                         
                         <p className="text-gray-300 mb-6 text-lg leading-relaxed">{modulo.descripcion}</p>
                         
-                        {/* Entregables */}
+                        {/* Contenido*/}
                         <div>
                           <h4 className="text-sm font-semibold text-gray-400 mb-3 flex items-center gap-2">
                             <FileText className="w-4 h-4" />
-                            Entregables
+                            Contenido
                           </h4>
                           <ul className="space-y-2">
-                            {modulo.entregables.map((entregable, idx) => (
+                            {modulo.Contenido.map((Contenido, idx) => (
                               <li key={idx} className="flex items-center gap-2 text-gray-400">
                                 <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                                <span>{entregable}</span>
+                                <span>{Contenido}</span>
                               </li>
                             ))}
                           </ul>

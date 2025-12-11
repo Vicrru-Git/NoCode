@@ -20,7 +20,7 @@ const propuestas = [
   {
     icon: Rocket,
     title: 'Bloque 3: Lanzamiento y Monetización',
-    description: 'Aprende estrategias de GTM y monetización. Desde SaaS hasta marketplaces, descubre cómo generar ingresos recurrentes y escalar tu negocio digital.',
+    description: 'Aprende estrategias de GTM y monetización. Desde SaaS hasta marketplaces, descubre cómo generar ingresos recurrentes y escalar tu negocio digital con automatización e IA.',
     gradient: 'from-primary via-secondary to-primary',
   },
 ]

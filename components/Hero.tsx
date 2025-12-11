@@ -60,7 +60,7 @@ export default function Hero() {
 
             <div className="flex items-center gap-6 text-sm text-gray-500">
               <div className="flex items-center gap-2">
-                <span className="text-primary font-semibold">945€</span>
+                <span className="text-primary font-semibold">2.045€</span>
                 <span>•</span>
                 <span>3 meses intensivos</span>
               </div>

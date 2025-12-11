@@ -105,7 +105,7 @@ export default function Footer() {
                   className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
                 >
                   <Mail className="w-4 h-4" />
-                  info@nocodeacademy.com
+                  ai@konektorgroup.com
                 </a>
               </li>
               <li className="flex items-center gap-4 pt-2">
@@ -117,15 +117,6 @@ export default function Footer() {
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-5 h-5" />
                 </a>
               </li>
             </ul>

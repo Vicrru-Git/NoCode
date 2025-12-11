@@ -74,30 +74,87 @@ export default function AboutKonektor() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
         
-        <div className="relative z-10 max-w-7xl mx-auto text-center">
+        <div className="relative z-10 max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
-              <span className="text-sm font-medium text-secondary">Ecosistema Konektor</span>
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
+                <span className="text-sm font-medium text-secondary">Ecosistema Konektor</span>
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-12 leading-tight">
+                El{' '}
+                <span className="gradient-text">Ecosistema Konektor</span>
+                <br />
+                impulsando la{' '}
+                <span className="gradient-text">innovación digital</span>
+              </h1>
             </div>
-            
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              El{' '}
-              <span className="gradient-text">Ecosistema Konektor</span>
-              <br />
-              impulsando la{' '}
-              <span className="gradient-text">innovación digital</span>
-            </h1>
-            
-            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              <a href="https://konektorgroup.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Konektor</a> es un ecosistema empresarial consolidado que conecta emprendedores, empresas y creadores digitales 
-              para impulsar la innovación y transformar ideas en negocios exitosos. NoCode Academy forma parte de este 
-              ecosistema, beneficiándose de una red de más de 50 empresas y 500+ emprendedores que comparten conocimiento, 
-              recursos y oportunidades de crecimiento.
-            </p>
+
+            {/* Left-aligned subtitles */}
+            <div className="max-w-4xl mx-auto space-y-8 text-left">
+              {/* Que es el ecosistema Konektor */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+                  ¿Qué es el ecosistema{' '}
+                  <span className="gradient-text">Konektor?</span>
+                </h3>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Es un ecosistema empresarial consolidado que conecta emprendedores, empresas y creadores digitales.
+                  Con el objetivo de impulsar la innovación y transformar ideas en negocios exitosos.
+                </p>
+              </motion.div>
+
+              {/* Que es NoCode Academy */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+                  ¿Qué es{' '}
+                  <span className="gradient-text">NoCode Academy?</span>
+                </h3>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  NoCode Academy es el vehículo definitivo del ecosistema para solopreneurs que buscan crear negocios digitales exitosos. 
+                  Sin necesidad de programar, transformamos ideas en realidades empresariales rentables.
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Image - Workshop/Presentación - Right below Hero */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-gray-800 shadow-xl"
+          >
+            <Image
+              src="/konektor-workshop.jpg"
+              alt="Workshop del ecosistema Konektor - Presentación y formación práctica para emprendedores"
+              fill
+              className="object-cover"
+              unoptimized
+              priority={false}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+              <p className="text-white text-sm font-medium">Formación y workshops del ecosistema</p>
+              <p className="text-gray-300 text-xs mt-1">Sesiones prácticas y networking para emprendedores</p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -119,20 +176,13 @@ export default function AboutKonektor() {
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p className="text-lg">
-                  El ecosistema Konektor nació con la visión de democratizar el emprendimiento digital y 
-                  crear un espacio donde emprendedores, empresas y creadores puedan colaborar, aprender 
-                  y crecer juntos.
+                Konektor nació como una empresa de formaciones y consultoría de inteligencia artificial. 
+                Nuestra visión ha evolucionado hacia algo más ambicioso: 
+                apoyar a las personas a crear sus propios negocios basados en IA, construyendo un ecosistema empresarial que impulse el emprendimiento digital.
                 </p>
                 <p>
-                  A lo largo de los años, hemos construido una red sólida que incluye más de 50 empresas 
-                  establecidas y una comunidad de más de 500 emprendedores activos. Este ecosistema no es 
-                  solo una red de contactos, es un motor de innovación que proporciona acceso a recursos, 
-                  conocimiento compartido y oportunidades de aceleración.
-                </p>
-                <p>
-                  NoCode Academy se beneficia directamente de este ecosistema, ofreciendo a nuestros alumnos 
-                  acceso a una red empresarial consolidada, programas de aceleración para proyectos destacados, 
-                  y un certificado avalado por el ecosistema Konektor que abre puertas en el mundo empresarial.
+                NoCode Academy se beneficia directamente de este ecosistema, ofreciendo a nuestros alumnos acceso a recursos de la compañía, 
+                programas de mentoría con profesionales experimentados y oportunidades de conexión con inversores para proyectos con potencial.
                 </p>
               </div>
             </motion.div>
@@ -205,41 +255,13 @@ export default function AboutKonektor() {
               <div>
                 <h4 className="text-xl font-semibold text-white mb-2 flex items-center gap-2">
                   <Award className="w-5 h-5 text-secondary" />
-                  Certificado avalado
+                  Apoyo y mentoría
                 </h4>
                 <p>
-                  Al completar NoCode Academy, recibes un certificado avalado por el{' '}
-                  <a href="https://konektorgroup.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    ecosistema Konektor
-                  </a>{' '}
-                  que valida tus conocimientos y te abre puertas en el mundo empresarial. Este certificado 
-                  es reconocido por las empresas del ecosistema y puede ser un diferenciador importante 
-                  en tu carrera profesional.
+                  Apoyo y mentoría constante durante el programa para ayudarte a crecer y alcanzar tus objetivos.
+                  Sientete acompañado en cada paso del camino y avalado por profesionales del sector.
                 </p>
               </div>
-            </div>
-          </motion.div>
-
-          {/* Image 2 - Workshop/Presentación */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-gray-800 shadow-xl"
-          >
-            <Image
-              src="/konektor-workshop.jpg"
-              alt="Workshop del ecosistema Konektor - Presentación y formación práctica para emprendedores"
-              fill
-              className="object-cover"
-              unoptimized
-              priority={false}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-              <p className="text-white text-sm font-medium">Formación y workshops del ecosistema</p>
-              <p className="text-gray-300 text-xs mt-1">Sesiones prácticas y networking para emprendedores</p>
             </div>
           </motion.div>
         </div>

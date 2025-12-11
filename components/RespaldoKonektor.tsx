@@ -24,7 +24,7 @@ const beneficios = [
   {
     icon: Award,
     title: 'Apoyo',
-    description: 'Certificado avalado por el ecosistema Konektor',
+    description: 'Apoyo y mentoría constante durante el programa',
     link: 'https://konektorgroup.com/',
   },
 ]

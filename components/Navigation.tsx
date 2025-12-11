@@ -10,8 +10,8 @@ import { usePathname } from 'next/navigation'
 const navItems = [
   { label: 'Inicio', href: '/', isSection: true, sectionId: 'inicio' },
   { label: 'Programa', href: '/programa', isSection: false },
-  { label: 'Blog', href: '/blog', isSection: false },
   { label: 'Sobre Nosotros', href: '/about', isSection: false },
+  { label: 'Blog', href: '/blog', isSection: false },
   { label: 'FAQ', href: '/faq', isSection: false },
 ]
 
